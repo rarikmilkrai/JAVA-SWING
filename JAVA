@@ -28,3 +28,23 @@
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaCalc().setVisible(true);
+
+//PROJETO DE UM VERIFICADOR DE IDADE QUE TAMBEM PODE SER USADO PARA IDENTIFICAR SE É MAIOR OU MENOR DE IDADE EM ALGUM SITE ADULTO.
+ private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+        int ano = Integer.parseInt(txtAno.getText());
+        int idade = 2022 - ano;
+        lblIdade.setText(Integer.toString(idade));
+        String sit = (idade>=18)?"MAIOR DE IDADE":"MENOR DE IDADE";
+        lblSituacao.setText(sit);
+       
+
+    }                                       
+
+            /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Telaidade().setVisible(true);
+            }
+        });
+    }
