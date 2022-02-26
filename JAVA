@@ -1,0 +1,30 @@
+//PROJETO DE UMA CALCULADORA EXPECIAL COM ALGUMAS FUNCOES DADAS COMO EXEMPLO NA AULA DO PROFESSOR GUSTAVO GUANABARA.
+
+    private void BtnCalcActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        int num = Integer.parseInt(txtNum.getValue().toString());
+        //RESTO DA DIVISAO POR 2
+        int r = num % 2;
+        lblResto.setText(Integer.toString(r));
+        //ELEVADO AO CUBO
+        double c = Math.pow(num, 3);
+        lblCubo.setText(Double.toString(c));
+        //RAIZ QUADRADA
+        double rq = Math.sqrt(num);
+        lblRaizq.SetTex(String.format("%.2f",rq));
+        //RAIZ CUBICA
+        double rc = Math.cbrt(num);
+        lblRaizcu.setTex(String.format("%.2f",rc));
+        //VALOR ABSOLUTO
+        int abs = Math.abs(num);
+        lblAbs.setText(Integer.toString(abs));
+
+
+        panCalc.setVisible(true);
+
+    }
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TelaCalc().setVisible(true);
