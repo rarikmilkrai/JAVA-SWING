@@ -62,4 +62,20 @@
        String res = (valor == num)?f1:f2;
        lblFrase.setFont(new Font("Arial Black", Font.PLAIN, 14));
        lblFrase.setText(res);
-    }                             
+    } 
+    
+    //CALCULADORA DE VOTO.
+int a = Integer.parseInt(txtAno.getText());
+        int i = 2022 - a;
+        if (i < 16){
+            lblR.setText("Não vota!");
+            lblT.setText("Menor de idade!");
+        } else {
+            if((i>=16 && i<18) || (i>70)){
+                lblR.setText("Voto Opcional!");  
+        }else {
+                lblR.setText("Voto Obrigatório!");
+                lblT.setText("Obrigatorio porque é maior de 18");
+            }  
+        }
+    }                                           
