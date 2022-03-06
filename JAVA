@@ -78,4 +78,16 @@ int a = Integer.parseInt(txtAno.getText());
                 lblT.setText("Obrigatorio porque é maior de 18");
             }  
         }
-    }                                           
+    }  
+//NUMERO FATORIAL ATE 12. USANDO WHILE
+ private void txtNStateChanged(javax.swing.event.ChangeEvent evt) {                                  
+        // TODO add your handling code here:
+        int n = Integer.parseInt(txtN.getValue().toString());
+        int f = 1;
+        int c = n;
+        while (c>=1){
+          f*=c;
+          c--;
+        }
+        lblFat.setText(Integer.toString(f));
+    }                                 
