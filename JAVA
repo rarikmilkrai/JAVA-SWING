@@ -118,3 +118,35 @@ int a = Integer.parseInt(txtAno.getText());
         }       
     }    
 }
+
+// CONTADOR FOR
+
+    private void sliInicioStateChanged(javax.swing.event.ChangeEvent evt) {                                       
+        // TODO add your handling code here:
+        int i = sliInicio.getValue();
+        lblInicio.setText(Integer.toString(i));
+    }                                      
+
+    private void sliFimStateChanged(javax.swing.event.ChangeEvent evt) {                                    
+        // TODO add your handling code here:
+        int f = sliFim.getValue();
+        lblFim.setText(Integer.toString(f));
+    }                                   
+
+    private void sliPassoStateChanged(javax.swing.event.ChangeEvent evt) {                                      
+        // TODO add your handling code here:
+        int p = sliPasso.getValue();
+        lblPasso.setText(Integer.toString(p));
+    }                                     
+
+    private void btnContActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+        int i = sliInicio.getValue();
+        int f = sliFim.getValue();
+        int p = sliPasso.getValue();
+        DefaultListModel lista = new DefaultListModel();
+        for (int c = i; c <= f; c += p){
+            lista.addElement(c);
+        }
+        lstCont.setModel(lista);
+    }                                       
